@@ -1,0 +1,63 @@
+body {
+  overflow-x: hidden;
+}
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  min-height: 100vh;
+  margin-bottom: -340px;
+}
+.banner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(to bottom, transparent, white);
+}
+.banner > img {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 105vh;
+  object-fit: cover;
+}
+.banner__1,
+.banner__5,
+.banner__4,
+.banner__3,
+.banner__2 {
+  left: 100%;
+}
+.banner__init {
+  animation: banner-show 0s linear forwards;
+}
+
+.banner__show {
+  animation: banner-show 5s linear forwards;
+}
+
+.banner__hide {
+  animation: banner-hide 5s linear forwards;
+}
+
+@keyframes banner-show {
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes banner-hide {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -100%;
+  }
+}

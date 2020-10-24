@@ -1,14 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import DataLayer from "./components/dataLayer";
+import { initial_state, Reducer } from "./components/reducer";
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <DataLayer initial_state={initial_state} reducer={Reducer}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </DataLayer>,
+  // </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

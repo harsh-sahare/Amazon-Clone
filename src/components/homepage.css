@@ -1,0 +1,17 @@
+.row {
+  display: flex;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  background: lightgray;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  padding: 10px;
+}
+
+.row__container > div:first-child {
+  margin-bottom: 20px;
+  background: transparent;
+  padding-top: 0px;
+}
